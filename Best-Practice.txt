@@ -1,0 +1,30 @@
+1. Keep Host and Docker Up to Date
+2. Do Not Expose the Docker Daemon Socket
+3. Run Docker in Rootless Mode
+	systemctl --user enable docker
+	sudo loginctl enable-linger $(whoami)
+	docker context use rootless
+	docker run -d -p 8080:80 nginx
+4. Avoid Privileged Containers
+5. Limit Container Resources
+6. Segregate Container Networks
+7. Improve Container Isolation
+8. Set Filesystem and Volumes to Read-only
+	doocker run --read-only alpine sh -c 'echo Hello World! > /tmp'
+9. Complete Lifecycle Management
+10. Restrict System Calls from Within Containers
+Securing Images
+11. Scan and Verify Container Images
+12. Use Minimal Base Images
+13. Don’t Leak Sensitive Info to Docker Images
+14. Use Multi Stage Builds
+15. Secure Container Registries
+16. Use Fixed Tags for Immutability
+Monitoring Containers
+17. Monitor Container Activity
+18. Secure Containers at Runtime
+19. Save Troubleshooting Data Separately from Containers
+20. Use Metadata Labels for Images
+
+
+
